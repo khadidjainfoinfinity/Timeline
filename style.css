@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+*{
+  padding:  0;
+  margin:  0;
+  box-sizing:  border-box;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing:  1px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+
+body{
+  min-height:  100vh;
+  width:  100%;
+  background: #C4EFFA;
+}
+
+
+.wrapper{
+  margin: 50px auto ;
+  padding:  0 20px;
+  max-width:  1080px;
+  position:  relative;
+}
+
+.wrapper .center-line{
+  position:  absolute;
+  height : 100%;
+  width:  4px;
+  left: 50%;
+  top:  30px;
+  background:  #fff;
+  transform:  translateX( -50%);
+}
+
+.wrapper .row{
+display:  flex;
+}
+
+.wrapper .row section{
+  background:  #fff;
+  border-radius:  10px;
+  width:  calc(50% - 40px);
+  padding:  24px;
+  position:  relative;
+}
+
+.wrapper .row section::before{
+  position:  absolute;
+  content:  "";
+  top:  40px;
+  width:  20px;
+  height:  20px;
+  background:  #fff;
+  transform:  rotate( 45deg);
+  border-radius:  4px;
+  z-index:  -1;
+}
+
+.wrapper .row1 section::before{
+  right:  -10px;
+}
+
+.wrapper .row2 section::before{
+  left: -10px;
+}
+
+.wrapper .row1{
+  justify-content:  flex-start;
+}
+
+.wrapper .row2{
+  justify-content:  flex-end;
+}
+
+.row section .details,
+.row section .bottom{
+  display:  flex;
+  justify-content:  space-between;
+  align-items:  center;
+}
+
+.row section .details .title{
+  font-size: 1.7rem;
+  text-transform:  capitalize;
+  font-weight:  800;
+}
+
+.row section p{
+  margin:  10px 0 20px 0;
+  font-weight:  600;
+}
+
+.row section .bottom a{
+  text-decoration:  none;
+  color:  #fff;
+  background: #73C3F6;
+  padding: 7px 15px;
+  border-radius:  8px;
+  font-size:  1.1rem;
+  font-weight:  700;
+}
+
+.row section .fa-solid,
+.center-line .scroll{
+  position:  absolute;
+  width:  40px;
+  height:  40px;
+  text-align:  center;
+  background:  #fff;
+  line-height:  40px;
+  border-radius:  50%;
+  font-size:  20px;
+}
+
+.row1 section .fa-solid{
+  right: -60px;
+  top:  30px;
+}
+
+.row2 section .fa-solid{
+  left: -60px;
+  top:  30px;
+}
+
+.center-line .scroll{
+  line-height:  58px;
+  font-size : 25px;
+  bottom:  0;
+  left: 50%;
+  transform:  translateX( -50%);
+}
+
+@media(max-width: 790px){
+  .wrapper .row{
+  margin:  30px 0 3px 60px;
+  }
+  
+  .wrapper .center-line{
+    left:  40px;
+  }
+  
+  .wrapper .row section{
+    width:  100%;
+  }
+  
+  .wrapper .row1 section::before{
+  left:-10px;
+}
+
+.row section .fa-solid{
+  left:  -60px;
+}
+
+}
+
+
+
+@media( max-width: 440px){
+  .row section .details .title{
+  font-size: 1.3rem;
+}
+
+.row section .details span,
+.row section .bottom i{
+  font-size:  .7rem;
+}
+
+.row section p{
+  margin:  10px 0 20px 0;
+  font-weight:  600;
+  font-size:  .8rem;
+}
+
+.row section .bottom a{
+  padding: 4px 8px;
+  font-size:  .9rem;
+}
+}
+
+
+@media( max-width: 365px){
+  
+  .wrapper .row{
+  margin:  70px 0 0px 40px;
+  }
+  
+    .wrapper .center-line{
+    left:  30px;
+  }
+  
+  .row section .fa-solid{
+  left:  -45px;
+  width:  30px;
+  height:  30px;
+  font-size:  15px;
+  line-height:  33px;
+}
+
+  .row section .details .title{
+  font-size: 1rem;
+}
+
+.row section .details span,
+.row section .bottom i{
+  font-size:  .6rem;
+}
+
+.row section p{
+  margin:  10px 0 20px 0;
+  font-weight:  600;
+  font-size:  .75rem;
+}
+
+.row section .bottom a{
+  padding: 4px 8px;
+  font-size:  .9rem;
+}
+
+.wrapper .row section::before{
+  width:  15px;
+  height:  15px;
+  border-radius:  3px;
+  left:  -5px;
+  
+  }
+}
